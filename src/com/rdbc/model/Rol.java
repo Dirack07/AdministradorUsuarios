@@ -8,6 +8,7 @@ public class Rol {
 	private String rol;
 	private String description;
 	private Date loadDate;
+	
 	public int getIdRol() {
 		return idRol;
 	}
