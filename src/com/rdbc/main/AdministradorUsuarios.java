@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.rdbc.conexion.ConexionBD;
 
+// David es un malnacido
 public class AdministradorUsuarios {
 
 	public static void main(String[] args) {
