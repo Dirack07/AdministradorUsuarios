@@ -33,7 +33,7 @@ public class UsuarioRolDaoImpl extends ConexionBD implements UsuarioRolDao {
 	@Override
 	public void update(UsuarioRol usuarioRol) {
 		// TODO Auto-generated method stub
-		query = "update usuario_rol set id_usuario = " + usuarioRol.getIdUsuario() + "where id_rol;
+		query = "update usuario_rol set id_usuario = " + usuarioRol.getIdUsuario() + "where id_rol";
 		System.out.println(query);
 		
 		try {

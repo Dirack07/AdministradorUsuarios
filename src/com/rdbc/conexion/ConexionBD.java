@@ -1,6 +1,7 @@
 package com.rdbc.conexion;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -13,10 +14,14 @@ public class ConexionBD {
 		Connection conexion = null;
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String servidor = "jdbc:mysql://localhost/bdprueba";
+			Class driverClass = Class.forName("com.mysql.jdbc.Driver");
+			Driver driver = (Driver)driverClass.newInstance();
+			DriverManager.registerDriver(driver);
+			
+			String servidor = "jdbc:mysql://127.0.0.1:3306/bdprueba";
 			String usuarioDB = "root";
 			String passwordDB = "aspire00";
+			
 			conexion = DriverManager.getConnection(servidor, usuarioDB,
 					passwordDB);
 		} catch (ClassNotFoundException ex) {
